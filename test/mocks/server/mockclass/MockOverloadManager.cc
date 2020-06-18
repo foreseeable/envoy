@@ -1,4 +1,4 @@
-#include "mocks.h"
+#include "MockOptions.h"
 
 #include <string>
 
@@ -17,8 +17,16 @@ using testing::ReturnPointee;
 using testing::ReturnRef;
 using testing::SaveArg;
 
-namespace Envoy {
 namespace Server {
+namespace Envoy {
+MockOverloadManager::MockOverloadManager() {
+  ON_CALL(*this, getThreadLocalOverloadState()).WillByDefault(ReturnRef(overload_state_));
+}
 
-} // namespace Server
-} // namespace Envoy
+MockOverloadManager::~MockOverloadManager() = default;
+
+
+
+}
+
+}

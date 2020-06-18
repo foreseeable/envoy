@@ -1,4 +1,4 @@
-#include "mocks.h"
+#include "MockOptions.h"
 
 #include <string>
 
@@ -17,8 +17,14 @@ using testing::ReturnPointee;
 using testing::ReturnRef;
 using testing::SaveArg;
 
-namespace Envoy {
 namespace Server {
+namespace Envoy {
+MockServerLifecycleNotifier::MockServerLifecycleNotifier() = default;
 
-} // namespace Server
-} // namespace Envoy
+MockServerLifecycleNotifier::~MockServerLifecycleNotifier() = default;
+
+
+
+}
+
+}

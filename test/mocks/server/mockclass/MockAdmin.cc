@@ -1,4 +1,4 @@
-#include "mocks.h"
+#include "MockOptions.h"
 
 #include <string>
 
@@ -17,8 +17,16 @@ using testing::ReturnPointee;
 using testing::ReturnRef;
 using testing::SaveArg;
 
-namespace Envoy {
 namespace Server {
+namespace Envoy {
+MockAdmin::MockAdmin() {
+  ON_CALL(*this, getConfigTracker()).WillByDefault(testing::ReturnRef(config_tracker_));
+}
 
-} // namespace Server
-} // namespace Envoy
+MockAdmin::~MockAdmin() = default;
+
+
+
+}
+
+}

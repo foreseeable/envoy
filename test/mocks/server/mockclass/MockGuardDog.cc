@@ -1,4 +1,4 @@
-#include "mocks.h"
+#include "MockOptions.h"
 
 #include <string>
 
@@ -17,8 +17,16 @@ using testing::ReturnPointee;
 using testing::ReturnRef;
 using testing::SaveArg;
 
-namespace Envoy {
 namespace Server {
+namespace Envoy {
+MockGuardDog::MockGuardDog() : watch_dog_(new NiceMock<MockWatchDog>()) {
+  ON_CALL(*this, createWatchDog(_, _)).WillByDefault(Return(watch_dog_));
+}
 
-} // namespace Server
-} // namespace Envoy
+MockGuardDog::~MockGuardDog() = default;
+
+
+
+}
+
+}

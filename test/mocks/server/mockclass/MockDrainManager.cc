@@ -1,4 +1,4 @@
-#include "mocks.h"
+#include "MockOptions.h"
 
 #include <string>
 
@@ -17,8 +17,16 @@ using testing::ReturnPointee;
 using testing::ReturnRef;
 using testing::SaveArg;
 
-namespace Envoy {
 namespace Server {
+namespace Envoy {
+MockDrainManager::MockDrainManager() {
+  ON_CALL(*this, startDrainSequence(_)).WillByDefault(SaveArg<0>(&drain_sequence_completion_));
+}
 
-} // namespace Server
-} // namespace Envoy
+MockDrainManager::~MockDrainManager() = default;
+
+
+
+}
+
+}
