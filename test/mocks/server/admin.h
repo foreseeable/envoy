@@ -56,49 +56,32 @@
 #include "gmock/gmock.h"
 #include "spdlog/spdlog.h"
 
-#include "MockOptions.h"
-#include "MockConfigTracker.h"
-#include "MockAdmin.h"
-#include "MockAdminStream.h"
-#include "MockDrainManager.h"
-#include "MockWatchDog.h"
-#include "MockGuardDog.h"
-#include "MockHotRestart.h"
-#include "MockListenerComponentFactory.h"
-#include "MockListenerManager.h"
-#include "MockServerLifecycleNotifier.h"
-#include "MockWorkerFactory.h"
-#include "MockWorker.h"
-#include "MockOverloadManager.h"
-#include "MockInstance.h"
-#include "MockMain.h"
-#include "MockServerFactoryContext.h"
-#include "MockFactoryContext.h"
-#include "MockTransportSocketFactoryContext.h"
-#include "MockListenerFactoryContext.h"
-#include "MockHealthCheckerFactoryContext.h"
-#include "MockFilterChainFactoryContext.h"
-#include "MockTracerFactory.h"
-#include "MockTracerFactoryContext.h"
-#include "MockBootstrapExtensionFactory.h"
+#include "config_tracker.h"
 namespace Envoy {
 namespace Server {
-class MockConfigTracker : public ConfigTracker {
+class MockAdmin : public Admin {
 public:
-  MockConfigTracker();
-  ~MockConfigTracker() override;
+  MockAdmin();
+  ~MockAdmin() override;
 
-  struct MockEntryOwner : public EntryOwner {};
+  // Server::Admin
+  MOCK_METHOD(bool, addHandler,
+              (const std::string& prefix, const std::string& help_text, HandlerCb callback,
+               bool removable, bool mutates_server_state));
+  MOCK_METHOD(bool, removeHandler, (const std::string& prefix));
+  MOCK_METHOD(Network::Socket&, socket, ());
+  MOCK_METHOD(ConfigTracker&, getConfigTracker, ());
+  MOCK_METHOD(void, startHttpListener,
+              (const std::string& access_log_path, const std::string& address_out_path,
+               Network::Address::InstanceConstSharedPtr address,
+               const Network::Socket::OptionsSharedPtr& socket_options,
+               Stats::ScopePtr&& listener_scope));
+  MOCK_METHOD(Http::Code, request,
+              (absl::string_view path_and_query, absl::string_view method,
+               Http::ResponseHeaderMap& response_headers, std::string& body));
+  MOCK_METHOD(void, addListenerToHandler, (Network::ConnectionHandler * handler));
 
-  MOCK_METHOD(EntryOwner*, add_, (std::string, Cb));
-
-  // Server::ConfigTracker
-  MOCK_METHOD(const CbsMap&, getCallbacksMap, (), (const));
-  EntryOwnerPtr add(const std::string& key, Cb callback) override {
-    return EntryOwnerPtr{add_(key, std::move(callback))};
-  }
-
-  std::unordered_map<std::string, Cb> config_tracker_callbacks_;
+  NiceMock<MockConfigTracker> config_tracker_;
 };
 }
 

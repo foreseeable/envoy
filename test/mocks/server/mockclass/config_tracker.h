@@ -58,23 +58,23 @@
 
 namespace Envoy {
 namespace Server {
-namespace Configuration {
-class MockTracerFactory : public TracerFactory {
+class MockConfigTracker : public ConfigTracker {
 public:
-  explicit MockTracerFactory(const std::string& name);
-  ~MockTracerFactory() override;
+  MockConfigTracker();
+  ~MockConfigTracker() override;
 
-  std::string name() const override { return name_; }
+  struct MockEntryOwner : public EntryOwner {};
 
-  MOCK_METHOD(ProtobufTypes::MessagePtr, createEmptyConfigProto, ());
-  MOCK_METHOD(Tracing::HttpTracerSharedPtr, createHttpTracer,
-              (const Protobuf::Message& config, TracerFactoryContext& context));
+  MOCK_METHOD(EntryOwner*, add_, (std::string, Cb));
 
-private:
-  std::string name_;
+  // Server::ConfigTracker
+  MOCK_METHOD(const CbsMap&, getCallbacksMap, (), (const));
+  EntryOwnerPtr add(const std::string& key, Cb callback) override {
+    return EntryOwnerPtr{add_(key, std::move(callback))};
+  }
+
+  std::unordered_map<std::string, Cb> config_tracker_callbacks_;
 };
-}
-
 }
 
 }

@@ -17,8 +17,8 @@ using testing::ReturnPointee;
 using testing::ReturnRef;
 using testing::SaveArg;
 
-namespace Server {
 namespace Envoy {
+namespace Server {
 MockListenerComponentFactory::MockListenerComponentFactory()
     : socket_(std::make_shared<NiceMock<Network::MockListenSocket>>()) {
   ON_CALL(*this, createListenSocket(_, _, _, _))
