@@ -46,7 +46,7 @@ envoy_extension_cc_test(
     tags = ["skip_on_windows"],
     deps = [
         "//source/extensions/tracers/datadog:config",
-        "//test/mocks/server:server_mocks",
+        "//test/mocks/server:tracer_factory_context_mocks","//test/mocks/server:tracer_factory_mocks",
         "//test/test_common:utility_lib",
         "@envoy_api//envoy/config/trace/v3:pkg_cc_proto",
     ],

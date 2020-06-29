@@ -52,7 +52,7 @@ envoy_extension_cc_test(
     extension_name = "envoy.filters.http.buffer",
     deps = [
         "//source/extensions/filters/http/buffer:config",
-        "//test/mocks/server:server_mocks",
+        "//test/mocks/server:factory_context_mocks",
         "//test/test_common:utility_lib",
         "@envoy_api//envoy/extensions/filters/http/buffer/v3:pkg_cc_proto",
     ],

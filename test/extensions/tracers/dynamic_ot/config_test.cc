@@ -4,7 +4,9 @@
 
 #include "extensions/tracers/dynamic_ot/config.h"
 
-#include "test/mocks/server/mocks.h"
+#include "test/mocks/server/tracer_factory_context.h"
+#include "test/mocks/server/tracer_factory.h"
+
 #include "test/test_common/environment.h"
 
 #include "fmt/printf.h"

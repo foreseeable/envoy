@@ -34,7 +34,8 @@
 #include "test/mocks/buffer/mocks.h"
 #include "test/mocks/network/mocks.h"
 #include "test/mocks/secret/mocks.h"
-#include "test/mocks/server/mocks.h"
+#include "test/mocks/server/transport_socket_factory_context.h"
+
 #include "test/mocks/ssl/mocks.h"
 #include "test/mocks/stats/mocks.h"
 #include "test/test_common/environment.h"
