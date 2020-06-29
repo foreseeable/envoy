@@ -7,7 +7,6 @@
 #include "extensions/filters/network/mongo_proxy/config.h"
 
 #include "test/mocks/server/factory_context.h"
-
 #include "test/test_common/utility.h"
 
 #include "gmock/gmock.h"

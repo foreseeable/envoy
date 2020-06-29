@@ -5,7 +5,6 @@
 
 #include "test/mocks/http/mocks.h"
 #include "test/mocks/server/factory_context.h"
-
 #include "test/test_common/simulated_time_system.h"
 #include "test/test_common/utility.h"
 

@@ -7,7 +7,6 @@
 #include "test/extensions/filters/network/rocketmq_proxy/utility.h"
 #include "test/mocks/server/factory_context.h"
 
-
 #include "gtest/gtest.h"
 
 using testing::_;

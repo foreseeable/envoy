@@ -8,7 +8,6 @@
 #include "test/common/buffer/utility.h"
 #include "test/common/stream_info/test_util.h"
 #include "test/mocks/server/factory_context.h"
-
 #include "test/test_common/logging.h"
 
 #include "gmock/gmock.h"

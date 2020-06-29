@@ -16,7 +16,6 @@
 
 #include "test/mocks/network/mocks.h"
 #include "test/mocks/server/transport_socket_factory_context.h"
-
 #include "test/test_common/registry.h"
 #include "test/test_common/utility.h"
 

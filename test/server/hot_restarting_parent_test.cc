@@ -7,7 +7,6 @@
 #include "test/mocks/server/instance.h"
 #include "test/mocks/server/listener_manager.h"
 
-
 #include "gtest/gtest.h"
 
 using testing::InSequence;

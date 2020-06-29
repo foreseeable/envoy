@@ -3,7 +3,6 @@
 
 #include "test/mocks/server/listener_factory_context.h"
 
-
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 

@@ -6,7 +6,6 @@
 #include "extensions/filters/network/redis_proxy/config.h"
 
 #include "test/mocks/server/factory_context.h"
-
 #include "test/test_common/test_runtime.h"
 
 #include "gmock/gmock.h"

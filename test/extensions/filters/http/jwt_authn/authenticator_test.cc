@@ -12,7 +12,6 @@
 #include "test/extensions/filters/http/jwt_authn/mock.h"
 #include "test/extensions/filters/http/jwt_authn/test_common.h"
 #include "test/mocks/server/factory_context.h"
-
 #include "test/test_common/utility.h"
 
 #include "gtest/gtest.h"

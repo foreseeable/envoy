@@ -4,9 +4,8 @@
 
 #include "extensions/filters/network/ratelimit/config.h"
 
-#include "test/mocks/server/instance.h"
 #include "test/mocks/server/factory_context.h"
-
+#include "test/mocks/server/instance.h"
 #include "test/test_common/utility.h"
 
 #include "gmock/gmock.h"

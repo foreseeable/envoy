@@ -24,7 +24,6 @@
 #include "test/mocks/local_info/mocks.h"
 #include "test/mocks/protobuf/mocks.h"
 #include "test/mocks/server/instance.h"
-
 #include "test/proto/deprecated.pb.h"
 #include "test/proto/sensitive.pb.h"
 #include "test/test_common/environment.h"

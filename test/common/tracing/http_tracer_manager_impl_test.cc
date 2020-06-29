@@ -3,7 +3,6 @@
 #include "common/tracing/http_tracer_manager_impl.h"
 
 #include "test/mocks/server/tracer_factory.h"
-
 #include "test/mocks/tracing/mocks.h"
 #include "test/test_common/registry.h"
 

@@ -32,7 +32,6 @@ envoy_extension_cc_test(
     deps = [
         ":dns_filter_test_lib",
         "//source/extensions/filters/udp/dns_filter:dns_filter_lib",
-        
         "//test/mocks/upstream:upstream_mocks",
         "//test/test_common:environment_lib",
         "@envoy_api//envoy/extensions/filters/udp/dns_filter/v3alpha:pkg_cc_proto",
@@ -60,7 +59,6 @@ envoy_cc_fuzz_test(
     deps = [
         "//source/extensions/filters/udp/dns_filter:dns_filter_lib",
         "//test/fuzz:utility_lib",
-        
         "//test/test_common:environment_lib",
     ],
 )

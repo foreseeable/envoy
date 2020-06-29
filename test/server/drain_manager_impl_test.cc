@@ -6,7 +6,6 @@
 
 #include "test/mocks/server/instance.h"
 
-
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 

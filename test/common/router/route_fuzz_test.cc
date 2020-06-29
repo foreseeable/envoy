@@ -8,7 +8,6 @@
 #include "test/fuzz/fuzz_runner.h"
 #include "test/fuzz/utility.h"
 
-
 namespace Envoy {
 namespace Router {
 namespace {

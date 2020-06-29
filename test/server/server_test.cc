@@ -19,11 +19,10 @@
 #include "test/common/stats/stat_test_utility.h"
 #include "test/integration/server.h"
 #include "test/mocks/server/bootstrap_extension_factory.h"
+#include "test/mocks/server/hot_restart.h"
 #include "test/mocks/server/instance.h"
 #include "test/mocks/server/options.h"
 #include "test/mocks/server/overload_manager.h"
-#include "test/mocks/server/hot_restart.h"
-
 #include "test/mocks/stats/mocks.h"
 #include "test/test_common/environment.h"
 #include "test/test_common/registry.h"

@@ -16,7 +16,6 @@
 #include "test/mocks/ratelimit/mocks.h"
 #include "test/mocks/server/factory_context.h"
 
-
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 

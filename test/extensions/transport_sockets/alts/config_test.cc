@@ -5,7 +5,6 @@
 
 #include "test/mocks/server/transport_socket_factory_context.h"
 
-
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 

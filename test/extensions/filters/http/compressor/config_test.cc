@@ -2,7 +2,6 @@
 
 #include "test/mocks/server/factory_context.h"
 
-
 #include "gtest/gtest.h"
 
 namespace Envoy {

@@ -11,7 +11,6 @@
 #include "extensions/tracers/xray/xray_configuration.h"
 
 #include "test/mocks/server/instance.h"
-
 #include "test/mocks/tracing/mocks.h"
 #include "test/test_common/environment.h"
 #include "test/test_common/network_utility.h"
