@@ -1,16 +1,12 @@
 #include "envoy/config/bootstrap/v3/bootstrap.pb.h"
-#include "envoy/config/route/v3/route_components.pb.h"
-#include "envoy/extensions/transport_sockets/tls/v3/cert.pb.h"
 
 #include "common/http/utility.h"
 
 #include "extensions/transport_sockets/tls/context_config_impl.h"
-#include "extensions/transport_sockets/tls/context_impl.h"
 #include "extensions/transport_sockets/tls/ssl_socket.h"
 
 #include "test/integration/http_integration.h"
 
-#include "absl/strings/str_replace.h"
 #include "gtest/gtest.h"
 
 namespace Envoy {

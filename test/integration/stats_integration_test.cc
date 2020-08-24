@@ -2,17 +2,13 @@
 
 #include "envoy/config/bootstrap/v3/bootstrap.pb.h"
 #include "envoy/config/core/v3/address.pb.h"
-#include "envoy/stats/scope.h"
 #include "envoy/stats/stats.h"
 
 #include "common/config/well_known_names.h"
-#include "common/memory/stats.h"
-#include "common/stats/symbol_table_creator.h"
 
 #include "test/common/stats/stat_test_utility.h"
 #include "test/config/utility.h"
 #include "test/integration/integration.h"
-#include "test/test_common/network_utility.h"
 #include "test/test_common/utility.h"
 
 #include "gtest/gtest.h"

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <memory>
 #include <string>
 
 #include "envoy/admin/v3/config_dump.pb.h"
@@ -10,7 +9,6 @@
 #include "envoy/config/route/v3/route.pb.h"
 
 #include "test/common/grpc/grpc_client_integration.h"
-#include "test/config/utility.h"
 #include "test/integration/http_integration.h"
 
 namespace Envoy {

@@ -1,7 +1,6 @@
 #include "envoy/api/v2/discovery.pb.h"
 #include "envoy/config/bootstrap/v3/bootstrap.pb.h"
 #include "envoy/config/core/v3/config_source.pb.h"
-#include "envoy/config/core/v3/grpc_service.pb.h"
 #include "envoy/config/route/v3/route.pb.h"
 #include "envoy/config/route/v3/scoped_route.pb.h"
 #include "envoy/extensions/filters/network/http_connection_manager/v3/http_connection_manager.pb.h"
@@ -11,7 +10,6 @@
 
 #include "test/common/grpc/grpc_client_integration.h"
 #include "test/integration/http_integration.h"
-#include "test/test_common/printers.h"
 #include "test/test_common/resources.h"
 
 #include "gmock/gmock.h"

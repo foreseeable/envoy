@@ -1,21 +1,11 @@
 #include "envoy/config/route/v3/route.pb.h"
 #include "envoy/config/route/v3/route_components.pb.h"
-#include "envoy/grpc/status.h"
-#include "envoy/stats/scope.h"
-
-#include "common/config/protobuf_link_hacks.h"
-#include "common/protobuf/protobuf.h"
-#include "common/protobuf/utility.h"
 
 #include "test/common/grpc/grpc_client_integration.h"
 #include "test/integration/http_integration.h"
-#include "test/integration/utility.h"
-#include "test/test_common/network_utility.h"
 #include "test/test_common/resources.h"
-#include "test/test_common/simulated_time_system.h"
 #include "test/test_common/utility.h"
 
-#include "absl/synchronization/notification.h"
 #include "gtest/gtest.h"
 
 using testing::AssertionResult;

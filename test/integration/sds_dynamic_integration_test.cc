@@ -4,14 +4,11 @@
 #include "envoy/api/v2/discovery.pb.h"
 #include "envoy/config/bootstrap/v3/bootstrap.pb.h"
 #include "envoy/config/core/v3/config_source.pb.h"
-#include "envoy/extensions/transport_sockets/tls/v3/cert.pb.h"
 #include "envoy/service/secret/v3/sds.pb.h"
 
 #include "common/config/api_version.h"
 #include "common/event/dispatcher_impl.h"
 #include "common/http/utility.h"
-#include "common/network/connection_impl.h"
-#include "common/network/utility.h"
 
 #include "extensions/transport_sockets/tls/context_config_impl.h"
 #include "extensions/transport_sockets/tls/context_manager_impl.h"
@@ -22,16 +19,12 @@
 #include "test/integration/http_integration.h"
 #include "test/integration/server.h"
 #include "test/integration/ssl_utility.h"
-#include "test/mocks/secret/mocks.h"
-#include "test/test_common/network_utility.h"
 #include "test/test_common/resources.h"
-#include "test/test_common/test_time_system.h"
 #include "test/test_common/utility.h"
 
 #include "absl/strings/match.h"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include "integration.h"
 #include "utility.h"
 
 namespace Envoy {

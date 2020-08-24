@@ -1,38 +1,25 @@
 #include "test/integration/http_integration.h"
 
 #include <functional>
-#include <list>
 #include <memory>
-#include <regex>
 #include <string>
 #include <vector>
 
-#include "envoy/buffer/buffer.h"
 #include "envoy/config/bootstrap/v3/bootstrap.pb.h"
 #include "envoy/event/dispatcher.h"
 #include "envoy/extensions/filters/network/http_connection_manager/v3/http_connection_manager.pb.h"
 #include "envoy/http/header_map.h"
 #include "envoy/network/address.h"
-#include "envoy/registry/registry.h"
 
-#include "common/api/api_impl.h"
 #include "common/buffer/buffer_impl.h"
-#include "common/common/fmt.h"
-#include "common/common/thread_annotations.h"
 #include "common/http/headers.h"
 #include "common/network/utility.h"
-#include "common/protobuf/utility.h"
-#include "common/runtime/runtime_impl.h"
-#include "common/upstream/upstream_impl.h"
 
 #include "test/common/upstream/utility.h"
-#include "test/integration/autonomous_upstream.h"
-#include "test/integration/test_host_predicate_config.h"
 #include "test/integration/utility.h"
 #include "test/mocks/upstream/cluster_info.h"
 #include "test/test_common/environment.h"
 #include "test/test_common/network_utility.h"
-#include "test/test_common/registry.h"
 
 #include "absl/time/time.h"
 #include "gtest/gtest.h"

@@ -7,11 +7,9 @@
 #include "envoy/secret/secret_provider.h"
 
 #include "common/config/datasource.h"
-#include "common/grpc/common.h"
 
 #include "test/extensions/filters/http/common/empty_http_filter_config.h"
 #include "test/integration/http_integration.h"
-#include "test/integration/utility.h"
 #include "test/test_common/registry.h"
 #include "test/test_common/utility.h"
 

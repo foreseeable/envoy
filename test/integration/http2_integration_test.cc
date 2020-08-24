@@ -9,13 +9,10 @@
 
 #include "common/buffer/buffer_impl.h"
 #include "common/common/random_generator.h"
-#include "common/http/header_map_impl.h"
 #include "common/network/socket_option_impl.h"
 
 #include "test/integration/utility.h"
-#include "test/mocks/http/mocks.h"
 #include "test/test_common/network_utility.h"
-#include "test/test_common/printers.h"
 #include "test/test_common/utility.h"
 
 #include "gtest/gtest.h"

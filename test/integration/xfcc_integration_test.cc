@@ -1,15 +1,10 @@
 #include "xfcc_integration_test.h"
 
 #include <memory>
-#include <regex>
 
 #include "envoy/config/bootstrap/v3/bootstrap.pb.h"
 #include "envoy/extensions/filters/network/http_connection_manager/v3/http_connection_manager.pb.h"
-#include "envoy/extensions/transport_sockets/tls/v3/cert.pb.h"
-#include "envoy/stats/scope.h"
 
-#include "common/event/dispatcher_impl.h"
-#include "common/http/header_map_impl.h"
 #include "common/network/utility.h"
 
 #include "extensions/transport_sockets/tls/context_config_impl.h"
@@ -17,14 +12,12 @@
 #include "extensions/transport_sockets/tls/ssl_socket.h"
 
 #include "test/test_common/network_utility.h"
-#include "test/test_common/printers.h"
 #include "test/test_common/utility.h"
 
 #include "absl/container/node_hash_map.h"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 #include "integration.h"
-#include "utility.h"
 
 namespace Envoy {
 namespace Xfcc {

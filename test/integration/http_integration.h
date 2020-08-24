@@ -5,11 +5,8 @@
 #include <string>
 
 #include "common/http/codec_client.h"
-#include "common/network/filter_impl.h"
 
 #include "test/integration/integration.h"
-#include "test/integration/utility.h"
-#include "test/test_common/printers.h"
 
 namespace Envoy {
 

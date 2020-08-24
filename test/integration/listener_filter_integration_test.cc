@@ -1,14 +1,7 @@
 #include <memory>
 
 #include "envoy/config/bootstrap/v3/bootstrap.pb.h"
-#include "envoy/config/cluster/v3/cluster.pb.h"
-#include "envoy/config/core/v3/base.pb.h"
-#include "envoy/extensions/access_loggers/file/v3/file.pb.h"
 
-#include "common/config/api_version.h"
-#include "common/network/utility.h"
-
-#include "extensions/filters/listener/tls_inspector/tls_inspector.h"
 #include "extensions/transport_sockets/tls/context_manager_impl.h"
 
 #include "test/integration/integration.h"

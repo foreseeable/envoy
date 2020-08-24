@@ -1,7 +1,3 @@
-#include "envoy/api/v2/core/config_source.pb.h"
-#include "envoy/api/v2/discovery.pb.validate.h"
-#include "envoy/service/discovery/v3/discovery.pb.validate.h"
-
 #include "common/common/assert.h"
 
 #include "test/integration/http_integration.h"

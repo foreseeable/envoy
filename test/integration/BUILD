@@ -30,9 +30,7 @@ envoy_cc_test_library(
     ],
     deps = [
         ":http_integration_lib",
-        "//source/common/config:protobuf_link_hacks",
         "//source/common/config:version_converter_lib",
-        "//source/common/protobuf:utility_lib",
         "//source/common/version:version_lib",
         "//source/extensions/filters/network/redis_proxy:config",
         "//test/common/grpc:grpc_client_integration_lib",
@@ -45,7 +43,6 @@ envoy_cc_test_library(
         "@envoy_api//envoy/config/endpoint/v3:pkg_cc_proto",
         "@envoy_api//envoy/config/listener/v3:pkg_cc_proto",
         "@envoy_api//envoy/config/route/v3:pkg_cc_proto",
-        "@envoy_api//envoy/extensions/transport_sockets/tls/v3:pkg_cc_proto",
     ],
 )
 

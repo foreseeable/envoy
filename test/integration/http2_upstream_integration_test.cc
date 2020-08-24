@@ -1,14 +1,9 @@
 #include "test/integration/http2_upstream_integration_test.h"
 
-#include <iostream>
-
 #include "envoy/config/bootstrap/v3/bootstrap.pb.h"
 #include "envoy/extensions/filters/network/http_connection_manager/v3/http_connection_manager.pb.h"
 
-#include "common/http/header_map_impl.h"
-
 #include "test/integration/autonomous_upstream.h"
-#include "test/test_common/printers.h"
 #include "test/test_common/utility.h"
 
 #include "gtest/gtest.h"
